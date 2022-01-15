@@ -201,15 +201,11 @@ class Bird(Obstacles):
         self.type = 0
         super().__init__(image, self.type)
         self.rect.y = 250
-        self.index = 1
     
     def draw(self, screen):
-        if self.index == 9:
-            self.index=0
-        if self.type == 2:
+        if self.type == 10:
             self.type = 0
         screen.blit(self.image[self.type // 5], self.rect)
-        self.index += 1 
         self.type += 1
     
 
